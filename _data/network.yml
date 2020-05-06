@@ -1,0 +1,16 @@
+- menu_name: "Useful Resources"
+
+- name: "Trailhead for Salesforce"
+  url: "https://trailhead.salesforce.com/"
+  class: "icon-cloud"
+  title: "Icons by Daniel Bruce"
+  
+- name: "Unsplash (free images)"
+  url: "http://unsplash.com/"
+  class: "icon-camera"
+  title: "Images by Unsplash"
+
+- name: "Jekyll (powers this site)"
+  url: "http://jekyllrb.com/"
+  class: "icon-lab-flask"
+  title: "Using Backstretch by Scott Robbin"

@@ -1,0 +1,9 @@
+url: 		'http://localhost:4000'
+baseurl: 	''
+urlimg: 	'http://localhost:4000/images/'
+gist:
+  noscript: false
+sass:
+  style: :expanded
+  line_numbers: true
+google_analytics_tracking_id: false

@@ -1,0 +1,75 @@
+---
+layout: page-fullwidth
+show_meta: false
+title: "Fresh Baked News"
+subheadline: "What's up in your slice of the world?"
+header:
+   image_fullwidth: "news_header.jpg"
+permalink: "/news/"
+---
+<div class="row">
+    <p class="small-12 columns">
+        <h3>Pick a slice</h3>
+        <p>The 10 freshest slices are here. For the whole loaf, check out <a href="{{ site.url }}{{ site.baseurl }}/news/archive">the Archive</a>.</p>
+    </div><!-- /.small-12.columns -->
+</div>
+
+<div class="row">
+  <div class="large-4 columns">
+      <img src="{{ site.urlimg }}news_personal.jpg">
+        <dl class="accordion" data-accordion>
+			<dd class="accordion-navigation" style="margin-left:0;">
+				<a href="#panel0" style="background:plum;"><span class="iconfont"></span><strong>Grounded by COVID-19</strong><br/><font style="font-size: 0.7rem;display: block;padding-left: 1.75rem;">Our loafstyle journal while in lockdown</font></a>
+					<div id="panel0" class="content">
+						This whole work from home lifestyle is making the days blur together so we're going to try and pick a unique event or topic each day to differentiate it from the next<br />
+						<a href="{{ site.url }}{{ site.baseurl }}/covid-diary/" title="Sneak a peek..."><strong>Have a read...</strong></a><br><br>
+					</div>
+				</dd>
+			{% assign counter = 1 %}
+			{% for post in site.categories.personal limit:10 %}
+			<dd class="accordion-navigation" style="margin-left:0;">
+			<a href="#panel{{ counter }}"><span class="iconfont"></span><strong>{{ post.title }}</strong></a>
+				<div id="panel{{ counter }}" class="content">
+                    {% if post.subheadline %}<p class="subheadline">{{ post.subheadline }}</p>{% endif %}
+					{% if post.meta_description %}{{ post.meta_description | strip_html | escape }}{% elsif post.teaser %}{{ post.teaser | strip_html | escape }}{% endif %}
+					<a href="{{ site.url }}{{ site.baseurl }}{{ post.url }}" title="Read {{ post.title | escape_once }}"><strong>{{ site.data.language.read_more }}</strong></a><br><br>
+				</div>
+			</dd>
+			{% assign counter=counter | plus:1 %}
+			{% endfor %}
+		</dl>
+  </div>
+  <div class="large-4 columns">
+      <img src="{{ site.urlimg }}news_world.jpg">
+        <dl class="accordion" data-accordion>
+			{% assign counter = 1 %}
+			{% for post in site.categories.world limit:10 %}
+			<dd class="accordion-navigation" style="margin-left:0;">
+			<a href="#panel{{ counter }}"><span class="iconfont"></span><strong>{{ post.title }}</strong>{% if post.subheadline %}<br/><font style="font-size: 0.5rem;display: block;padding-left: 1.75rem;">{{ post.subheadline | strip_html | escape }}</font>{% endif %}</a>
+				<div id="panel{{ counter }}" class="content">
+					{% if post.meta_description %}{{ post.meta_description | strip_html | escape }}{% elsif post.teaser %}{{ post.teaser | strip_html | escape }}{% endif %}
+					<a href="{{ site.url }}{{ site.baseurl }}{{ post.url }}" title="Read {{ post.title | escape_once }}"><strong>{{ site.data.language.read_more }}</strong></a><br><br>
+				</div>
+			</dd>
+			{% assign counter=counter | plus:1 %}
+			{% endfor %}
+		</dl>
+  </div>
+  <div class="large-4 columns">
+      <img src="{{ site.urlimg }}news_technology.jpg">
+        <dl class="accordion" data-accordion>
+			{% assign counter = 1 %}
+			{% for post in site.categories.technology limit:10 %}
+			<dd class="accordion-navigation" style="margin-left:0;">
+			<a href="#panel{{ counter }}"><span class="iconfont"></span><strong>{{ post.title }}</strong></a>
+				<div id="panel{{ counter }}" class="content">
+                    {% if post.subheadline %}<p class="subheadline">{{ post.subheadline }}</p>{% endif %}
+					{% if post.meta_description %}{{ post.meta_description | strip_html | escape }}{% elsif post.teaser %}{{ post.teaser | strip_html | escape }}{% endif %}
+					<a href="{{ site.url }}{{ site.baseurl }}{{ post.url }}" title="Read {{ post.title | escape_once }}"><strong>{{ site.data.language.read_more }}</strong></a><br><br>
+				</div>
+			</dd>
+			{% assign counter=counter | plus:1 %}
+			{% endfor %}
+		</dl>
+  </div>
+</div>

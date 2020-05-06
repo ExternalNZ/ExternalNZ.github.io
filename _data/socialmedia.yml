@@ -1,0 +1,14 @@
+- name: GitHub
+  url: http://github.com/ExternalNZ
+  class: icon-github
+  title: Not too active but present
+
+- name: Twitter
+  url: http://twitter.com/haydius
+  class: icon-twitter
+  title: "I use it to get updates and alerts"
+
+- name: Trailhead (Salesforce)
+  url: https://trailblazer.me/id/haydius
+  class: icon-cloud
+  title: "Trailhead (Salesforce)"

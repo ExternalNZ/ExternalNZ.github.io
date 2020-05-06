@@ -1,0 +1,31 @@
+<aside>
+	<div class="border-dotted radius b30">
+		<img src="{{ site.url }}/assets/img/myphoto-professional.jpg" alt="Photo of Cameron Brown">
+		<span style="text-align:center;">
+			<em>I don't usually look this good ;)</em>
+		</span>
+	</div>
+	<div class="panel radius button alert expand">
+		<h3>COVID-19 UPDATE</h3>
+		<p>
+			Just know I'm doing okay :) <br />
+			<a href="{{ site.url }}{{ site.baseurl }}/covid-diary/">View my COVID-19 Diary</a>
+		</p>
+	</div>
+	<div class="panel radius button warning">
+		<h3>Disclaimer</h3>
+		<p>
+			The views and opinions expressed on this site are not necessarily that of my own and are commonly designed purely for comedic relief and are not intended to be quoted upon or used out of context. If you'd like my formal opinion or feedback on a specific topic or event, please contact me directly.
+		</p>
+	</div>
+	<div class="panel radius">
+		<h3>{{ site.data.language.latest_articles }}</h3>
+		<p>
+			{% include list-posts entries='5' offset='0' %}
+		</p>
+	</div>
+
+  <img class="b30" src="http://dummyimage.com/303x16:9/df4949/e27b3f.png&amp;text=Ugly+Ad+Space" alt="">
+
+
+</aside>

@@ -1,0 +1,127 @@
+title: 'Pseudonym Toast'
+slogan: 'Cameron Brown (Haydius) on GitHub'
+description: '<strong>pseudonym toast</strong> is the GitHub presence of Cameron "Haydius" Brown.'
+credits: '<p>Built with <a href="http://jekyllrb.com/?al=haydius" target="_blank">Jekyll</a>'
+author: haydius
+
+url: 'https://haydius.github.io/'
+urlimg: 'https://haydius.github.io/images/'
+baseurl: ''
+improve_content: https://haydius.github.io/edit/gh-pages
+logo: "logo.png"
+plugins:
+    - jekyll-asciidoc
+    - jekyll-gist
+    - jekyll-paginate
+paginate: 5
+paginate_path: "blog/page:num"
+sidebar            : ''
+markdown           : kramdown
+permalink          : /:categories/:title/
+highlight          : rouge
+excerpt_separator  : "<!--more-->"
+include            : ['.htaccess']
+
+exclude:
+    - .sass-cache
+    - Gemfile
+    - Gemfile.lock
+    - LICENSE
+    - README.md
+    - INSTALL.md
+    - vendor
+
+language: 'en'
+
+compress_html:
+  clippings: all
+  comments: ["<!-- ", " -->"]
+  endings: all
+  profile: false
+  ignore:
+    envs: [development]
+
+defaults:
+  -
+    scope:
+      path: ''
+      type: 'pages'
+    values:
+      show_meta: false
+      comments: false
+      author: haydius
+  -
+    scope:
+      path: ''
+      type: 'posts'
+    values:
+      show_meta: true
+      comments: false
+      author: haydius
+  -
+    scope:
+      path: ''
+      type: 'news'
+    values:
+      show_meta: true
+      comments: false
+      author: haydius
+
+# google_author:             'https://plus.google.com/u/0/118311555303973066167'
+# google_site_verification:  'Vk0IOJ2jwG_qEoG7fuEXYqv0m2rLa8P778Fi_GrsgEQ'
+# bing_webmastertools_id:    '0FB4C028ABCF07C908C54386ABD2D97F'
+# yandex_site_verification:  ''
+# alexa_verify_id:           ''
+
+favicon-16x16:                          'favicon-16x16.png'
+favicon-32x32:                          'favicon-32x32.png'
+favicon-icon:                           'favicon.ico'
+touch-icon-192x192:                     'touch-icon-192x192.png'
+apple-touch-icon-180x180-precomposed:   'apple-touch-icon-180x180-precomposed.png'
+apple-touch-icon-152x152-precomposed:   'apple-touch-icon-152x152-precomposed.png'
+apple-touch-icon-120x120-precomposed:   'apple-touch-icon-120x120-precomposed.png'
+apple-touch-icon-76x76-precomposed:     'apple-touch-icon-76x76-precomposed.png'
+apple-touch-icon-60x60-precomposed:     'apple-touch-icon-60x60-precomposed.png'
+apple-touch-icon-precomposed:           'apple-touch-icon-precomposed.png'
+msapplication_tileimage:                'msapplication_tileimage.png'
+msapplication_tilecolor:                '#ffefc0'
+msapplication_config:                   'browserconfig.xml'
+chrome_site-manifest:                   'site.webmanifest'
+safari_maskicon:                        'safari-pinned-tab.svg'
+
+#Facebook-Optimization › http://j.mp/fb_optimize
+og_image:                           'http://images.phlow.de/phlow/phlow_de-logo-512x.png'
+og_locale:                          'en_EN'
+og_type:                            'website'
+
+socialmedia:
+    twitter: haydius
+    facebook: haydius
+
+disqus_shortname: pseudonymtoast
+
+sass:
+    sass_dir : _sass
+    style    : :compressed
+
+# https://www.google.com/analytics/
+# used in _includes/footer_scripts
+
+# google_analytics_tracking_id:
+
+
+#  tawk.to is a free live chat app that lets you monitor and chat
+#  with visitors on your website or from a free customizable page
+#  To load the script add tawkto: true in front matter of each page
+
+# used in _includes/footer_scripts
+
+# tawkto_embed_uri:
+
+asciidoctor-enabled: false
+asciidoctor:
+  description: 
+  attributes:
+    source-highlighter: coderay
+    coderay-css: style
+    icons: font
